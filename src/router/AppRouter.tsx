@@ -9,6 +9,10 @@ const router = createBrowserRouter([
     path: "/about-us",
     element: <div>Hello About Us!</div>,
   },
+  {
+    path: "/rooms",
+    element: <div>Hello About Us!</div>,
+  },
 ]);
 
 const AppRouter = () => <RouterProvider router={router} />
