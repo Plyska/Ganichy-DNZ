@@ -1,9 +1,15 @@
+import { getValueDB } from "../../firebase";
 import React from "react";
 
-const HomeScreen: React.FC = () => {
-    return (
-        <div>HomeScreen</div>
-    )
+interface News {
+  id: string;
+  title: string;
 }
+
+const HomeScreen: React.FC = () => {
+  getValueDB<News>("/templates", console.log)
+
+  return <div>HomeScreen</div>;
+};
 
 export default HomeScreen;
