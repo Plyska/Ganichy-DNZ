@@ -1,9 +1,7 @@
 import React from "react";
 
-const DocumentsScreen: React.FC = () => {
-    return (
-        <div>DocumentsScreen</div>
-    )
-}
+const DocumentsScreen = (): JSX.Element => {
+  return <div>DocumentsScreen</div>;
+};
 
 export default DocumentsScreen;

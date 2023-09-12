@@ -1,13 +1,15 @@
+import { useEffect } from "react";
 import { getValueDB } from "../../firebase";
-import React from "react";
 
 interface News {
   id: string;
   title: string;
 }
 
-const HomeScreen: React.FC = () => {
-  getValueDB<News>("/templates", console.log)
+const HomeScreen = (): JSX.Element => {
+  useEffect(() => {
+    getValueDB<News>("/templates", (data) => console.log(data));
+  }, []);
 
   return <div>HomeScreen</div>;
 };

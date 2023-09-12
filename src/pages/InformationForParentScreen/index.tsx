@@ -1,6 +1,6 @@
 import React from "react";
 
-const InformationForParentScreen: React.FC = () => {
+const InformationForParentScreen = (): JSX.Element => {
     return (
         <div>InformationForParentScreen</div>
     )
