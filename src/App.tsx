@@ -1,10 +1,10 @@
-import React from 'react';
-import AppRouter from './router/AppRouter';
+import { RouterProvider } from "react-router-dom";
+import router from "./constants/router";
 
 function App() {
   return (
     <div className="App">
-      <AppRouter />
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -22,12 +22,12 @@ export function getValueDB<T>(path: string, callback: (value: T) => void) {
   });
 }
 
-export function setValueDB(path: string, data: any) {
+export function setValueDB<T>(path: string, data: T) {
   return set(ref(db, path), data);
 }
 
-export function updateValueDB(path: string, data: any) {
-  return update(ref(db, path), data);
+export function updateValueDB<T>(path: string, data: T) {
+  return update(ref(db, path), data as object);
 }
 
 export function deleteValueDB(path: string) {
