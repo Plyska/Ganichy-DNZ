@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import firebaseConfig from "../config";
+import { firebaseConfig } from "../config";
 
 import {
   getDatabase,
@@ -26,8 +26,8 @@ export function setValueDB<T>(path: string, data: T) {
   return set(ref(db, path), data);
 }
 
-export function updateValueDB<T>(path: string, data: T) {
-  return update(ref(db, path), data as object);
+export function updateValueDB<T extends {}>(path: string, data: T) {
+  return update(ref(db, path), data);
 }
 
 export function deleteValueDB(path: string) {

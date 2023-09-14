@@ -1,15 +1,6 @@
 import { useEffect } from "react";
 import { getValueDB, setValueDB, updateValueDB } from "../../firebase";
-
-interface News {
-  id: string;
-  title: string;
-}
-
-interface User {
-  name?: string;
-  surname: string;
-}
+import { News, User } from "../../types";
 
 const HomeScreen = (): JSX.Element => {
   useEffect(() => {

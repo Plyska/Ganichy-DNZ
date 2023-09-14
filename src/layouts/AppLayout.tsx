@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const AppLayout = () => {
+const AppLayout = (): JSX.Element => {
   return (
     <>
       <header style={{ height: "80px", background: "silver" }}> HEADER </header>
