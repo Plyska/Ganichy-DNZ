@@ -4,6 +4,6 @@ export interface News {
 }
 
 export interface User {
-  name?: string;
+  name: string;
   surname: string;
 }
