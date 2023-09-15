@@ -1,7 +1,7 @@
-import React from "react";
+import Box from "@mui/material/Box";
 
 const DocumentsScreen = (): JSX.Element => {
-  return <div>DocumentsScreen</div>;
+  return <Box component="section">DocumentsScreen</Box>;
 };
 
 export default DocumentsScreen;

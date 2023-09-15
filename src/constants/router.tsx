@@ -8,13 +8,14 @@ import NewsScreen from "../pages/NewsScreen";
 import DocumentsScreen from "../pages/DocumentsScreen";
 import InformationForParentScreen from "../pages/InformationForParentScreen";
 import AppLayout from "../layouts/AppLayout";
+import Typography from "@mui/material/Typography";
 
 const ErrorElement = () => {
   const error = useRouteError();
 
   console.log("error: ", error);
 
-  return <h1>OOOPS...</h1>;
+  return <Typography component="h1">OOOPS...</Typography>;
 };
 
 const staticPages: RouteObject = {
