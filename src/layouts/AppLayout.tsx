@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 const AppLayout = (): JSX.Element => {
   return (
     <>
-      <Box component="header" style={{ height: "80px", background: "silver" }}> HEADER </Box>
+      <Box component="header"> HEADER </Box>
       <Outlet />
     </>
   );
