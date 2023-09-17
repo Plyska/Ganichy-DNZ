@@ -1,9 +1,7 @@
-import React from "react";
+import Box from "@mui/material/Box";
 
 const InformationForParentScreen = (): JSX.Element => {
-    return (
-        <div>InformationForParentScreen</div>
-    )
-}
+  return <Box component="section">InformationForParentScreen</Box>;
+};
 
 export default InformationForParentScreen;
