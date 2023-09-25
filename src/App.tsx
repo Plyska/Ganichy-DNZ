@@ -1,15 +1,8 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./constants/router";
 
-import { ThemeProvider } from "@mui/material/styles";
-import { lightTheme } from "./theme";
-
 function App() {
-  return (
-    <ThemeProvider theme={lightTheme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

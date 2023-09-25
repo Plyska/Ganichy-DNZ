@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import {
   API_KEY,
   AUTH_DOMAIN,

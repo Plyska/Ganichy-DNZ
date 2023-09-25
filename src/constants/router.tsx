@@ -34,7 +34,7 @@ const staticPages: RouteObject = {
     },
     {
       path: "gallery",
-      element: <GalleryScreen />
+      element: <GalleryScreen />,
     },
     {
       path: "documents",

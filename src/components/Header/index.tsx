@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, KeyboardEvent } from "react";
 import logo from "../../assets/logo.png";
 import { styles } from "./styles";
 import { Link } from "react-router-dom";
@@ -21,6 +21,13 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
+  const handleEnter =
+    (fn: (event: KeyboardEvent) => void) => (event: KeyboardEvent) => {
+      if (event.key === "13") {
+        fn(event);
+      }
+    };
+
   const toggleDrawer = () => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -37,52 +44,30 @@ const Header = (): JSX.Element => {
         </Stack>
 
         <Stack
-          sx={styles.header__linksContainer}
-          spacing={styles.header__linksSpacing}
+          sx={styles.linksContainer}
+          spacing={styles.linksSpacing}
           divider={<Divider orientation="vertical" flexItem />}
           direction="row"
           useFlexGap
           flexWrap="wrap"
         >
-          <TypographyLink
-            fontWeight={500}
-            component={Link}
-            underline="hover"
-            to="/news"
-          >
-            Новини
-          </TypographyLink>
-          <TypographyLink
-            fontWeight={500}
-            component={Link}
-            underline="hover"
-            to="/gallery"
-          >
-            Галерея
-          </TypographyLink>
-          <TypographyLink
-            fontWeight={500}
-            component={Link}
-            underline="hover"
-            to="/documents"
-          >
-            Установчі документи
-          </TypographyLink>
-          <TypographyLink
-            fontWeight={500}
-            component={Link}
-            underline="hover"
-            to="/info-for-parent"
-          >
-            Інформація для батьків
-          </TypographyLink>
-
+          {linksForDrawer.map((link) => (
+            <TypographyLink
+              key={link.title}
+              fontWeight={500}
+              component={Link}
+              underline="hover"
+              to={link.path}
+            >
+              {link.title}
+            </TypographyLink>
+          ))}
           <Typography fontWeight={500} color="#1976d2">
             Вхід
           </Typography>
         </Stack>
 
-        <Box sx={styles.header__mobileDrawerContainer}>
+        <Box sx={styles.mobileDrawerContainer}>
           <IconButton
             onClick={toggleDrawer}
             color="inherit"
@@ -103,7 +88,7 @@ const Header = (): JSX.Element => {
               }}
               role="presentation"
               onClick={toggleDrawer}
-              onKeyDown={toggleDrawer}
+              onKeyDown={handleEnter(toggleDrawer)}
             >
               <List>
                 {linksForDrawer.map((link, index) => (
