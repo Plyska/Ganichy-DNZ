@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import HomeScreen from "../pages/HomeScreen";
 import NewsScreen from "../pages/NewsScreen";
+import GalleryScreen from "../pages/GalleryScreen";
 import DocumentsScreen from "../pages/DocumentsScreen";
 import InformationForParentScreen from "../pages/InformationForParentScreen";
 import AppLayout from "../layouts/AppLayout";
@@ -30,6 +31,10 @@ const staticPages: RouteObject = {
     {
       path: "news",
       element: <NewsScreen />,
+    },
+    {
+      path: "gallery",
+      element: <GalleryScreen />
     },
     {
       path: "documents",

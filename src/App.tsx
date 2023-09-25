@@ -2,7 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./constants/router";
 
 import { ThemeProvider } from "@mui/material/styles";
-import { lightTheme, darkTheme } from "./theme";
+import { lightTheme } from "./theme";
 
 function App() {
   return (
