@@ -1,9 +1,5 @@
-export interface News {
-  id: string;
+export interface LinkForDrawer {
   title: string;
-}
-
-export interface User {
-  name: string;
-  surname: string;
+  path: string;
+  icon?: React.ReactNode;
 }
