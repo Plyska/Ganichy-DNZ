@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent } from "react";
+import { useState } from "react";
 import logo from "../../assets/logo.png";
 import { styles } from "./styles";
 import { Link } from "react-router-dom";
@@ -17,16 +17,10 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import { handleEnter } from "../../utils";
 
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-  const handleEnter =
-    (fn: (event: KeyboardEvent) => void) => (event: KeyboardEvent) => {
-      if (event.key === "13") {
-        fn(event);
-      }
-    };
 
   const toggleDrawer = () => {
     setIsMenuOpen((prev) => !prev);
