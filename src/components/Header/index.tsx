@@ -30,10 +30,16 @@ const Header = (): JSX.Element => {
     <Container maxWidth="xl" component="header">
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack direction="row" justifyContent="center" alignItems="center">
-          <Box component="img" src={logo} alt="logo" width={130} height={100} />
-          <Stack direction="column">
-            <Typography variant="h5">Ганичівський ЗДО</Typography>
-            <Typography variant="body1">Грай. Навчайся. Зростай</Typography>
+          <Box
+            component="img"
+            src={logo}
+            alt="logo"
+            width={130}
+            height="12vh"
+          />
+          <Stack direction="column" spacing={0.5}>
+            <Typography variant="h4">Ганичівський ЗДО</Typography>
+            <Typography variant="h5">Грай. Навчайся. Зростай</Typography>
           </Stack>
         </Stack>
 
@@ -56,9 +62,13 @@ const Header = (): JSX.Element => {
               {link.title}
             </TypographyLink>
           ))}
-          <Typography fontWeight={500} color="#1976d2">
+          <TypographyLink
+            sx={styles.loginButn}
+            fontWeight={500}
+            underline="hover"
+          >
             Вхід
-          </Typography>
+          </TypographyLink>
         </Stack>
 
         <Box sx={styles.mobileDrawerContainer}>
