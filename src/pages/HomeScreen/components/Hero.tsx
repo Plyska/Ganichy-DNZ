@@ -3,6 +3,7 @@ import { styles } from "../styles";
 import { Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../../utils/motion";
+import SectionWrapper from "../../../components/SectionWrapper";
 
 const Hero = (): JSX.Element => {
   return (
@@ -57,4 +58,4 @@ const Hero = (): JSX.Element => {
   );
 };
 
-export default Hero;
+export default SectionWrapper(<Hero />, "hero");

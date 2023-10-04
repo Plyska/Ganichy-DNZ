@@ -2,7 +2,9 @@ import bgimg from "../../assets/dnz-bg-img.png";
 
 export const styles = {
   container: {
-    height: "88vh",
+    height: "88vh", // у мене 12vh це хедер. Як мені правильно це застилізувати
+  },
+  heroContainer: {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundImage: `url('${bgimg}')`,

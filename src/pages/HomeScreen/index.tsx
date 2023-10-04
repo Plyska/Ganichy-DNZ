@@ -1,10 +1,13 @@
 import Box from "@mui/material/Box";
 import Hero from "./components/Hero";
+import { styles } from "./styles";
 
 const HomeScreen = (): JSX.Element => {
   return (
     <Box component="main">
-      <Hero />
+      <Box component="div" sx={styles.heroContainer}>
+        <Hero />
+      </Box>
     </Box>
   );
 };
