@@ -1,4 +1,9 @@
 export const styles = {
+  container: {
+    position: "fixed",
+    backgroundColor: "white",
+    zIndex: 100,
+  },
   linksContainer: {
     display: { xs: "none", sm: "none", md: "none", xl: "flex", lg: "flex" },
   },

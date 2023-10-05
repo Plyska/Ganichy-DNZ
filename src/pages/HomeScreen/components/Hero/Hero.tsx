@@ -1,21 +1,21 @@
 import Box from "@mui/material/Box";
-import { styles } from "../styles";
+import { styles } from "./styles";
 import { Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../../utils/motion";
-import SectionWrapper from "../../../components/SectionWrapper";
+import { fadeIn, textVariant } from "../../../../utils/motion";
+import SectionWrapper from "../../../../components/SectionWrapper";
 
 const Hero = (): JSX.Element => {
   return (
     <Stack
-      component="section"
+      component="div"
       alignItems="center"
       justifyContent="space-around"
       sx={styles.container}
     >
       <Box>
         <motion.div variants={textVariant()} initial="hidden" animate="show">
-          <Typography align="center" variant="h2">
+          <Typography color="primary" align="center" variant="h2">
             Вас вітає
           </Typography>
           <Typography color="primary" variant="h1" align="center">
@@ -38,8 +38,8 @@ const Hero = (): JSX.Element => {
         initial="hidden"
         animate="show"
       >
-        <Box sx={styles.scrollBtn}>
-          <Box component="a" href="#">
+        <Box component="a" href="#about">
+          <Box sx={styles.scrollBtn}>
             <motion.div
               animate={{
                 y: [0, 24, 0],

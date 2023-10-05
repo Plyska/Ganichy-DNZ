@@ -5,13 +5,19 @@ export const styles = {
     marginRight: "auto",
     position: "relative",
     zIndex: 0,
-    paddingLeft: { xs: "4rem", sm: "4rem", md: "1rem", xl: "1rem", lg: "1rem" },
+    paddingLeft: {
+      xs: "4rem",
+      sm: "4rem",
+      md: "4rem",
+      xl: "12rem",
+      lg: "12rem",
+    },
     paddingRight: {
       xs: "4rem",
       sm: "4rem",
-      md: "1rem",
-      xl: "1rem",
-      lg: "1rem",
+      md: "4rem",
+      xl: "12rem",
+      lg: "12rem",
     },
     paddingTop: {
       xs: "4rem",

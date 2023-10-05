@@ -95,6 +95,7 @@ theme.typography.h5 = {
 };
 
 theme.typography.body1 = {
+  fontWeight: 300,
   [theme.breakpoints.up("xs")]: {
     fontSize: "0.7rem",
   },

@@ -27,7 +27,7 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <Container maxWidth="xl" component="header">
+    <Container maxWidth="xl" component="header" sx={styles.container}>
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Box
@@ -38,8 +38,12 @@ const Header = (): JSX.Element => {
             height="12vh"
           />
           <Stack direction="column" spacing={0.5}>
-            <Typography variant="h4">Ганичівський ЗДО</Typography>
-            <Typography variant="h5">Грай. Навчайся. Зростай</Typography>
+            <Typography color="primary" variant="h4">
+              Ганичівський ЗДО
+            </Typography>
+            <Typography color="primary" variant="h5">
+              Грай. Навчайся. Зростай
+            </Typography>
           </Stack>
         </Stack>
 
