@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About";
+import Roadmap from "./components/Roadmap";
 import { styles } from "./styles";
 
 const HomeScreen = (): JSX.Element => {
@@ -12,6 +13,7 @@ const HomeScreen = (): JSX.Element => {
       <Box component="div" sx={styles.aboutContainer}>
         <About />
       </Box>
+      <Roadmap />
     </Box>
   );
 };
