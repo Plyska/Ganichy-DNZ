@@ -4,7 +4,6 @@ import { styles } from "./styles";
 import { Link } from "react-router-dom";
 import { linksForDrawer } from "../../constants";
 
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -27,16 +26,18 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <Container maxWidth="xl" component="header" sx={styles.container}>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+    <Box component="section" sx={styles.container}>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        px="3rem"
+        py="0.5rem"
+        width="100%"
+        maxWidth="1600px"
+      >
         <Stack direction="row" justifyContent="center" alignItems="center">
-          <Box
-            component="img"
-            src={logo}
-            alt="logo"
-            width={130}
-            height="12vh"
-          />
+          <Box component="img" src={logo} alt="logo" sx={styles.logo} />
           <Stack direction="column" spacing={0.5}>
             <Typography color="primary" variant="h4">
               Ганичівський ЗДО
@@ -121,7 +122,7 @@ const Header = (): JSX.Element => {
           </SwipeableDrawer>
         </Box>
       </Stack>
-    </Container>
+    </Box>
   );
 };
 

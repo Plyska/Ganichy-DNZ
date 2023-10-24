@@ -20,31 +20,32 @@ const Roadmap = (): JSX.Element => {
     setValue(newValue);
   };
   return (
-    <Box sx={{ width: "100%", typography: "body1" }}>
-      <TabContext value={value}>
-        <Box>
+    <SectionWrapper componentId="roadmap">
+      <Box>
+        <TabContext value={value}>
           <TabList
             onChange={handleChange}
             aria-label="lab API tabs example"
             centered
           >
-            <Tab icon={<RestaurantMenuIcon />} label="Меню" value="1" />
             <Tab
               icon={<CalendarMonthIcon />}
               label="Розпорядок дня"
-              value="2"
+              value="1"
             />
+            <Tab icon={<RestaurantMenuIcon />} label="Меню" value="2" />
           </TabList>
-        </Box>
-        <TabPanel value="1">
-          <Menu />
-        </TabPanel>
-        <TabPanel value="2">
-          <Schedule />
-        </TabPanel>
-      </TabContext>
-    </Box>
+
+          <TabPanel value="2" sx={styles.tabpanel}>
+            <Menu />
+          </TabPanel>
+          <TabPanel value="1" sx={styles.tabpanel}>
+            <Schedule />
+          </TabPanel>
+        </TabContext>
+      </Box>
+    </SectionWrapper>
   );
 };
 
-export default SectionWrapper(<Roadmap />, "roadmap");
+export default Roadmap;

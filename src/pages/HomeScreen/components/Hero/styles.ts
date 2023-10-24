@@ -1,6 +1,6 @@
 export const styles = {
   container: {
-    height: "88vh",
+    height: "100vh",
   },
   scrollBtn: {
     width: "15px",

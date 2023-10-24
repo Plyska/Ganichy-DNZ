@@ -1,15 +1,14 @@
-import bgimg from "../../assets/dnz-bg-img.png";
-import aboutbg from "../../assets/about-bg.png";
+//import aboutbg from "../../assets/about-bg.png";
 
 export const styles = {
   heroContainer: {
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage: `url('${bgimg}')`,
+    //backgroundImage: `url('${bgimg}')`, поки видаляю, потім додасться щось інше;
   },
   aboutContainer: {
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage: `url('${aboutbg}')`,
+    //backgroundImage: `url('${aboutbg}')`, поки видаляю, потім додасться щось інше;
   },
 };

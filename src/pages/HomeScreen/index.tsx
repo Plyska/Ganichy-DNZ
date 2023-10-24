@@ -10,10 +10,10 @@ const HomeScreen = (): JSX.Element => {
       <Box component="div" sx={styles.heroContainer}>
         <Hero />
       </Box>
+      <About />
       <Box component="div" sx={styles.aboutContainer}>
-        <About />
+        <Roadmap />
       </Box>
-      <Roadmap />
     </Box>
   );
 };
