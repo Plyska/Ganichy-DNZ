@@ -4,7 +4,6 @@ import { styles } from "./styles";
 import { Link } from "react-router-dom";
 import { linksForDrawer } from "../../constants";
 
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -27,13 +26,25 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <Container maxWidth="xl" component="header">
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+    <Box component="section" sx={styles.container}>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        px="3rem"
+        py="0.5rem"
+        width="100%"
+        maxWidth="1600px"
+      >
         <Stack direction="row" justifyContent="center" alignItems="center">
-          <Box component="img" src={logo} alt="logo" width={130} height={100} />
-          <Stack direction="column">
-            <Typography variant="h5">Ганичівський ЗДО</Typography>
-            <Typography variant="body1">Грай. Навчайся. Зростай</Typography>
+          <Box component="img" src={logo} alt="logo" sx={styles.logo} />
+          <Stack direction="column" spacing={0.5}>
+            <Typography color="primary" variant="h4">
+              Ганичівський ЗДО
+            </Typography>
+            <Typography color="primary" variant="h5">
+              Грай. Навчайся. Зростай
+            </Typography>
           </Stack>
         </Stack>
 
@@ -56,9 +67,13 @@ const Header = (): JSX.Element => {
               {link.title}
             </TypographyLink>
           ))}
-          <Typography fontWeight={500} color="#1976d2">
+          <TypographyLink
+            sx={styles.loginButn}
+            fontWeight={500}
+            underline="hover"
+          >
             Вхід
-          </Typography>
+          </TypographyLink>
         </Stack>
 
         <Box sx={styles.mobileDrawerContainer}>
@@ -107,7 +122,7 @@ const Header = (): JSX.Element => {
           </SwipeableDrawer>
         </Box>
       </Stack>
-    </Container>
+    </Box>
   );
 };
 
