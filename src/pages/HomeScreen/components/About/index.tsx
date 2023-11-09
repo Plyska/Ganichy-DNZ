@@ -6,7 +6,7 @@ import { styles } from "./styles";
 import Slide from "@mui/material/Slide";
 import childrenImg from "../../../../assets/garden.png";
 
-const About = () => {
+const About = (): JSX.Element => {
   return (
     <SectionWrapper componentId="about">
       <Stack

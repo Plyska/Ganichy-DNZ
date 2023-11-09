@@ -14,7 +14,7 @@ import Fade from "@mui/material/Fade";
 import { ScheduleItem, TimelineScheduleCardProps } from "../../../../types";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
-const TimelineCard = ({ schedule }: TimelineScheduleCardProps) => (
+const TimelineCard = ({ schedule }: TimelineScheduleCardProps): JSX.Element => (
   <TimelineItem>
     <TimelineOppositeContent color="text.secondary">
       <Fade in={true} timeout={2000}>

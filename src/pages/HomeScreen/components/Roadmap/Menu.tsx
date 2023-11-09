@@ -15,7 +15,7 @@ import Fade from "@mui/material/Fade";
 import { useDevice } from "../../../../hooks";
 import { UseDevice, MenuItem, TimelineMenuCardProps } from "../../../../types";
 
-const TimelineCard = ({ menu }: TimelineMenuCardProps) => (
+const TimelineCard = ({ menu }: TimelineMenuCardProps): JSX.Element => (
   <TimelineItem>
     <TimelineSeparator>
       <TimelineDot>{menu.icon}</TimelineDot>
